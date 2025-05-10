@@ -1,0 +1,19 @@
+
+
+
+self.timer = QTimer(self)
+self.timer.timeout.connect(self.auto_update_chat)
+self.timer.start(1000)  # обновлять чат каждую секунду
+self.user_scrolled_up = False
+self.chat_display.verticalScrollBar().valueChanged.connect(self.on_scroll)
+
+
+def auto_update_chat(self):
+    updated_users = load_users()
+    updated_user = updated_users.get(self.user_email)
+    if not updated_user:
+        return
+    self.user = updated_user
+    self.users_db = updated_users
+    if self.current_friend:
+        self.load_chat_history()
