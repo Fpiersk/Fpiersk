@@ -12,6 +12,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtCore import Qt, QTimer, QSize
 from PyQt5.QtGui import QColor, QIcon, QPixmap
+from flask import Flask
 
 USERS_DB = "users.json"
 
