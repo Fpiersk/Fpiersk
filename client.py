@@ -643,8 +643,6 @@ class ChatWindow(QWidget):
             self.load_chat_history()
 
 if __name__ == "__main__":
-    HOST = '0.0.0.0'  # слушаем все интерфейсы
-    PORT = 65432
     app = QApplication(sys.argv)
     app.setStyleSheet("""
         QWidget {
