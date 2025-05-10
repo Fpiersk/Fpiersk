@@ -643,6 +643,8 @@ class ChatWindow(QWidget):
             self.load_chat_history()
 
 if __name__ == "__main__":
+    port = 8080
+    app.run(debug=True,host='0.0.0.0',port=port)
     app = QApplication(sys.argv)
     app.setStyleSheet("""
         QWidget {
